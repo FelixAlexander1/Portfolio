@@ -1,0 +1,298 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=MS+Sans+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Estilos generales */
+body {
+  font-family: 'MS Sans Serif', sans-serif;
+  overflow-x: hidden; 
+  height: 100%;
+  margin: 0; 
+  background-color: #008080; 
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  
+}
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Para que el canvas no interfiera con la imagen */
+  z-index: 10;
+}
+/* Imagen circular */
+.image {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+/* Barra de título */
+.title-bar {
+  background: #c0c0c0;
+  border-bottom: 2px solid black;
+  padding: 5px;
+}
+
+.title-bar-text {
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 16px;
+}
+
+/* Fuentes para encabezados y párrafos con estilo pixelado */
+h2, h3, h4, h5 {
+  font-family: 'Press Start 2P', monospace; /* Fuente estilo pixelado */
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+p {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Contenedor de imagen y texto */
+.image-and-text {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 20px; /* Espacio entre la imagen y el párrafo */
+}
+
+@media (max-width: 768px) {
+  .image-and-text {
+    flex-direction: column; /* Pone el texto debajo de la imagen */
+    align-items: center; /* Centra los elementos en pantalla pequeña */
+    text-align: center; /* Centra el texto */
+  }
+
+  .image-and-text p {
+    margin-top: 10px; /* Espacio entre la imagen y el párrafo */
+  }
+}
+
+/* Estilos para los íconos debajo de la presentación */
+.technologies {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los íconos */
+  margin-top: 5px; /* Espacio superior */
+}
+
+.technologies svg {
+  font-size: 40px; /* Tamaño de los íconos */
+  color: #000000;
+}
+
+.footer {
+  background: silver;
+  border-top: 2px solid black;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.tab-content {
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+/* El contenedor .desktop ocupa toda la pantalla */
+.desktop {
+  padding-top: 100px;
+}
+
+.window {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid #808080;
+  background-color: white;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1; /* Asegura que las ventanas estén encima de los iconos */
+}
+
+@media screen and (max-width: 768px) {
+  /* En pantallas pequeñas, reducimos el tamaño de la ventana */
+  .window {
+    max-width: 90%; /* Limitar el ancho a un 90% */
+    width: 90%; /* Esto asegura que se ajuste correctamente */
+  }
+}
+
+/* Aseguramos que el contenido de la ventana ocupe todo el espacio disponible */
+.window-body {
+  flex: 1; 
+  padding: 20px;
+  width: 100%; 
+  box-sizing: border-box; 
+  overflow-y: auto;
+
+  /* Estilo Windows 98 */
+  background-color: #c0c0c0; 
+  border: 2px solid #808080; 
+  font-family: 'MS Sans Serif', sans-serif; 
+  font-size: 14px; 
+  color: black; 
+  
+  /* Opcional: borde de estilo 3D */
+  box-shadow: inset 1px 1px 3px #fff, inset -1px -1px 3px #808080;
+}
+
+/* Estilo para la barra de herramientas inferior */
+.toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background-color: #c0c0c0;
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+/* Botón de inicio con sombra estilo Windows 98 */
+.toolbar .start-button {
+  background-color: transparent;
+  border: 2px solid #808080; /* Borde gris oscuro */
+  padding: 5px 10px;
+  height: 25px;
+  font-family: 'Press Start 2P', monospace;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 1px 1px 3px #fff, inset -1px -1px 3px #808080,  /* Sombra interna para el efecto 3D */
+              1px 1px 3px #000, /* Sombra externa para que resalte */
+              -1px -1px 3px #fff; /* Sombra externa en dirección opuesta */
+  border-radius: 2px; /* Bordes redondeados para el estilo retro */
+}
+
+/* Texto Start */
+.toolbar .start-text {
+  font-family: 'MS Sans Serif', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  padding-left: 5px;
+}
+
+/* Estilo cuando el botón de inicio es hover */
+.toolbar .start-button:hover {
+  background-color: #a0a0a0;
+  box-shadow: inset 1px 1px 3px #fff, inset -1px -1px 3px #808080, 
+              1px 1px 3px #000, -1px -1px 3px #fff, /* Se intensifica la sombra */
+              0 0 10px rgba(0, 0, 0, 0.3); /* Agregar una sombra adicional al hacer hover */
+}
+
+.toolbar .clock {
+  margin-left: auto; 
+  font-family: 'MS Sans Serif', sans-serif; /* Fuente clásica de Windows 98 */
+  font-size: 14px; 
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 24px; 
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+/* Iconos estilo Windows 98 */
+.desktop-icons {
+  position: fixed;
+  left: 10px;
+  top: 20px;
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  z-index: 10; 
+}
+
+@media screen and (max-width: 1360px) {
+  .desktop-icons {
+    top: 20px; 
+    z-index: 100; 
+    left: 13.5px;
+    position: absolute; 
+    width: 100%; 
+    flex-direction: row; /* Cambiamos la dirección de los iconos de columna a fila, de derecha a izquierda */
+    justify-content: flex-start; 
+  }
+}
+
+.desktop-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.desktop-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+.desktop-icons a:hover {
+  text-decoration: underline;
+}
+/*estilos game*/
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.game-frame {
+  width: 500px;
+  height: 500px;
+  border: 3px solid #808080;
+}
+
+.play-button {
+  display: block; /* Hace que el botón ocupe toda la línea */
+  margin: 0 auto; /* Centra el botón horizontalmente */
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #000;
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+
+
+.play-button:hover {
+  background-color: #a0a0a0;
+}

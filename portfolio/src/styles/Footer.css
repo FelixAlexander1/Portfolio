@@ -1,0 +1,43 @@
+/* Barra de herramientas del footer */
+.footer {
+    background: #c0c0c0; 
+    border-top: 2px solid black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .toolbar-btn {
+    background: #c0c0c0;
+    color: black;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toolbar-btn:hover {
+    background: #a0a0a0;
+  }
+  
+  .toolbar-btn:active {
+    background: #808080;
+  }
+  
+  .footer p {
+    font-size: 12px;
+    color: black;
+    margin-top: 10px;
+  }
+  

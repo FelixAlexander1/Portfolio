@@ -1,0 +1,62 @@
+/* Card Container */
+.card-container {
+  background-color: #c0c0c0; 
+  border: 2px solid black; 
+  border-radius: 0; 
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  gap: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6); 
+}
+
+/* Card */
+.card {
+  background-color: #ffffff; 
+  border: 2px solid #000000;
+  border-radius: 0; 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1 1 calc(80% - 20px);
+  transition: transform 0.2s;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+}
+
+/* Hover en las tarjetas */
+.card:hover {
+  transform: scale(1.05); 
+}
+
+/* Adaptaciones para pantallas más pequeñas */
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 20px); /* 50% en pantallas medianas */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%; /* 100% en pantallas pequeñas */
+  }
+}
+
+/* Sección sobre mí */
+#sobre-mi .card-container {
+  background-color: #b0c4de; 
+}
+
+/* Sección contacto */
+#contacto .card-container {
+  background-color: #ffcccb; 
+}

@@ -1,0 +1,62 @@
+/* Contenedor de tarjetas de proyectos */
+.card-proyectos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; 
+  padding: 20px; 
+}
+
+/* Estilo para las tarjetas de proyectos */
+.card-proyectos {
+  background-color: #ffffff; 
+  border: 2px solid #000000; 
+  border-radius: 0; 
+  padding: 15px;
+  box-sizing: border-box;
+  flex: 1 1 calc(33% - 40px); 
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); 
+  transition: transform 0.2s; 
+  font-family: 'MS Sans Serif', sans-serif; 
+}
+
+/* Efecto hover en las tarjetas */
+.card-proyectos:hover {
+  transform: scale(1.05); 
+}
+
+/* Ajuste para pantallas más grandes */
+@media (max-width: 900px) {
+  .card-proyectos {
+    flex: 1 1 calc(50% - 40px); 
+  }
+}
+
+@media (max-width: 600px) {
+  .card-proyectos {
+    flex: 1 1 100%; 
+  }
+}
+
+/* Títulos de los proyectos */
+.card-proyectos h2 {
+  font-size: 16px;
+  color: #000000; 
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Descripción de los proyectos */
+.card-proyectos p {
+  font-size: 12px;
+  color: #333333; 
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+/* Estilo para la imagen de los proyectos */
+.card-proyectos img {
+  width: 100%; 
+  height: auto; 
+  transition: opacity 0.3s ease-in-out; 
+}

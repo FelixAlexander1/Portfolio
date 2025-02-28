@@ -1,0 +1,33 @@
+/* Contenedor de los íconos de contacto */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Estilo para los íconos de contacto */
+.contact-icon {
+  font-size: 2rem;
+  color: #000080; 
+  text-decoration: none;
+  background-color: #c0c0c0; 
+  padding: 8px;
+  border: 2px solid #000000; 
+  border-radius: 4px; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Cambio de color y fondo al pasar el ratón (hover) */
+.contact-icon:hover {
+  background-color: #000080; 
+  color: #ffffff; 
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .contact-icon {
+    font-size: 1.5rem; /* Reducción del tamaño de los íconos en pantallas más pequeñas */
+  }
+}
