@@ -1,32 +1,9 @@
-// vite.config.js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import { resolve } from 'path'
-import { copyFileSync } from 'fs'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    {
-      name: 'copy-redirects',
-      buildEnd() {
-        // Esto solo es necesario si usas Netlify, no para Vercel
-        copyFileSync(
-          resolve(__dirname, 'public/_redirects'), 
-          resolve(__dirname, 'dist/_redirects')
-        );
-      },
-    },
-  ],
+  plugins: [react()],
   build: {
-    outDir: 'dist', // Asegúrate de que la carpeta de salida sea correcta
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'), // Ruta correcta al index.html
-      },
-    },
+    outDir: 'dist',  // Puedes cambiar esta carpeta si lo deseas
   },
-  publicDir: 'public', // Confirma que la carpeta pública esté bien ubicada
-  root: '.', // Define correctamente la raíz del proyecto
-})
-
+});

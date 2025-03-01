@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/ContactForm.css'; // Asegúrate de que el archivo de CSS esté importado correctamente
+import emailjs from '@emailjs/browser';
+import '../styles/ContactForm.css';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -19,7 +20,6 @@ function ContactForm() {
     e.preventDefault();
     const { name, email, message } = formData;
 
-    // Validación simple
     if (!name || !email || !message) {
       setErrorMessage('Por favor, completa todos los campos.');
       return;
@@ -30,13 +30,29 @@ function ContactForm() {
       return;
     }
 
-    // Simula el envío de datos
-    console.log('Datos enviados:', formData);
+    emailjs.send(
+      import.meta.env.VITE_SERVICE_ID,  
+      import.meta.env.VITE_TEMPLATE_ID, 
+      { name, email, message },
+      import.meta.env.VITE_PUBLIC_KEY  
+    )
+    .then((response) => {
+      console.log('Correo enviado:', response);
+      setFormData({ name: '', email: '', message: '' });
+      setErrorMessage('');
+      setSuccessMessage('¡Tu mensaje ha sido enviado con éxito!');
+      console.log(import.meta.env.VITE_SERVICE_ID);
+console.log(import.meta.env.VITE_TEMPLATE_ID);
+console.log(import.meta.env.VITE_PUBLIC_KEY);
 
-    // Limpia el formulario y muestra un mensaje de éxito
-    setFormData({ name: '', email: '', message: '' });
-    setErrorMessage('');
-    setSuccessMessage('¡Tu mensaje ha sido enviado con éxito!');
+    })
+    .catch((error) => {
+      console.error('Error al enviar el correo:', error);
+      setErrorMessage('Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.');
+      console.log(import.meta.env.VITE_SERVICE_ID);
+console.log(import.meta.env.VITE_TEMPLATE_ID);
+console.log(import.meta.env.VITE_PUBLIC_KEY);
+    });
   };
 
   return (
@@ -46,43 +62,17 @@ function ContactForm() {
 
       <div className="form-group">
         <label htmlFor="name">Nombre</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Tu nombre"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+        <input type="text" id="name" name="name" placeholder="Tu nombre" value={formData.name} onChange={handleChange} required />
       </div>
       <div className="form-group">
         <label htmlFor="email">Correo electrónico</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Tu correo electrónico"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" value={formData.email} onChange={handleChange} required />
       </div>
       <div className="form-group">
         <label htmlFor="message">Mensaje</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          placeholder="Escribe tu mensaje aquí"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
+        <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí" value={formData.message} onChange={handleChange} required />
       </div>
-      <button type="submit" className="send-button">
-        Enviar
-      </button>
+      <button type="submit" className="send-button">Enviar</button>
     </form>
   );
 }
