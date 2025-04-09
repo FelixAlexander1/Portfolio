@@ -20,10 +20,10 @@ const DesktopIcons = ({ setActiveTab }) => {
         <span>Contacto</span>
       </a>
       {/* Nuevo icono para Juegos */}
-      <a href="#" onClick={() => setActiveTab('juegos')}>
+      {/*<a href="#" onClick={() => setActiveTab('juegos')}>
         <img src={gameIcon} alt="Juegos" />
         <span>Juegos</span>
-      </a>
+      </a>*/}
     </div>
   );
 };

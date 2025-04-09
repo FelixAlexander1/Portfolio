@@ -86,7 +86,7 @@ function App() {
             </div>
           )}
           
-          {activeTab === 'juegos' && (
+          {/*{activeTab === 'juegos' && (
             <div className="tab-content">
               <h2>Juegos</h2>
               {!gameStarted ? (
@@ -97,7 +97,7 @@ function App() {
                 </div>
               )}
             </div>
-          )}
+          )}*/}
         </div>
       </div>
 
