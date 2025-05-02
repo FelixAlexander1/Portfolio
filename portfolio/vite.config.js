@@ -1,12 +1,10 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
-  plugins: [react()],
   build: {
-    outDir: 'dist', // Define la carpeta de salida
+    outDir: 'dist',  // Directorio de salida
     rollupOptions: {
-      input: 'index.html', // Asegúrate de que este archivo está presente
+      input: 'index.html', // Asegúrate de que este archivo sea el de entrada
     },
   },
 });

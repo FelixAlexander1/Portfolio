@@ -7,11 +7,13 @@
   min-height: 350px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #c0c0c0; 
-  border-radius: 0; 
-  border: 2px solid #000000; 
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
-  font-family: 'MS Sans Serif', sans-serif; 
+  background-color: #ffffff;
+  border: 2px solid #000000;
+
+  /* Estilo "enterrado" o hundido */
+  box-shadow: inset 3px 3px 5px #808080, inset -2px -2px 5px #ffffff;
+
+  font-family: 'MS Sans Serif', sans-serif;
 }
 
 /* Estilos para los campos de entrada */

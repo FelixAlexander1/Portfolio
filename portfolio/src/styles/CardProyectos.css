@@ -15,7 +15,7 @@
   padding: 15px;
   box-sizing: border-box;
   flex: 1 1 calc(33% - 40px); 
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); 
+  box-shadow: inset 3px 3px 5px #808080, inset -2px -2px 5px #ffffff;
   transition: transform 0.2s; 
   font-family: 'MS Sans Serif', sans-serif; 
 }
