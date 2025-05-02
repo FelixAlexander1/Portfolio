@@ -159,6 +159,7 @@ p {
 @media (max-width: 768px) {
   .technologies {
     margin-top: 20px;
+    margin-left: 20px
   }
 }
 
@@ -166,6 +167,7 @@ p {
 @media (max-width: 480px) {
   .technologies {
     margin-top: 15px;
+    margin-left: 0.1px
   }
 }
 
