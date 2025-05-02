@@ -261,7 +261,7 @@ p {
   box-sizing: border-box;
   overflow: hidden;
   min-height: 650px;
-
+  padding-bottom: 60px;
   /* Estilo Windows 98 */
   background-color: #c0c0c0;
   border: 2px solid #808080;
@@ -286,7 +286,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   padding: 5px;
-  z-index: 100;
+  z-index: 1000;
   box-sizing: border-box;
 }
 
