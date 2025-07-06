@@ -2,7 +2,7 @@ import React from 'react';
 import miPcIcon from '../images/mi-pc.png';
 import folderIcon from '../images/folder.png';
 import contactoIcon from '../images/contacto.png';
-import gameIcon from 'portfolio/src/images/game.png';
+/*import gameIcon from 'portfolio/src/images/game.png';*/
 
 const DesktopIcons = ({ setActiveTab }) => {
   return (

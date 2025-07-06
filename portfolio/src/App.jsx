@@ -11,6 +11,7 @@ import CardProyectos from './components/CardProyectos';
 import DesktopIcons from './components/DesktopIcons';
 import blocNotasGif from './assets/gifs/BlocNotas.gif';
 import blogGif from './assets/gifs/Blog.gif';
+import tiendagif from './assets/gifs/tiendagif.gif';
 
 function App() {
   const [activeTab, setActiveTab] = useState('sobre-mi');
@@ -89,6 +90,13 @@ function App() {
                   gifSrc={blogGif}
                   githubRepo="https://github.com/FelixAlexander1/Blog"
                 />
+                <CardProyectos 
+                  title="Tienda"
+                  description="Tienda en React donde puedes ver productos y añadirlos al carrito."
+                  imageSrc={tiendagif}
+                  gifSrc={tiendagif}
+                  githubRepo="https://github.com/FelixAlexander1/Tienda-e"
+                  />
               </div>
             </div>
           )}
