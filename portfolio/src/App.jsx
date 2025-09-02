@@ -12,6 +12,7 @@ import DesktopIcons from './components/DesktopIcons';
 import blocNotasGif from './assets/gifs/BlocNotas.gif';
 import blogGif from './assets/gifs/Blog.gif';
 import tiendagif from './assets/gifs/tiendagif.gif';
+import DashboardGif from './assets/gifs/Dashboard.gif';
 
 function App() {
   const [activeTab, setActiveTab] = useState('sobre-mi');
@@ -95,6 +96,13 @@ function App() {
                   description="Tienda en React donde puedes ver productos y añadirlos al carrito."
                   imageSrc={tiendagif}
                   gifSrc={tiendagif}
+                  githubRepo="https://github.com/FelixAlexander1/Tienda-e"
+                  />            
+                <CardProyectos 
+                  title="Dashboard"
+                  description="Dashboard dinamico en react."
+                  imageSrc={DashboardGif}
+                  gifSrc={DashboardGif}
                   githubRepo="https://github.com/FelixAlexander1/Tienda-e"
                   />
               </div>
