@@ -13,6 +13,7 @@ import blocNotasGif from './assets/gifs/BlocNotas.gif';
 import blogGif from './assets/gifs/Blog.gif';
 import tiendagif from './assets/gifs/tiendagif.gif';
 import DashboardGif from './assets/gifs/Dashboard.gif';
+import WarehouseGif from './assets/gifs/Warehouse.gif';
 
 function App() {
   const [activeTab, setActiveTab] = useState('sobre-mi');
@@ -103,8 +104,15 @@ function App() {
                   description="Dashboard dinamico en react."
                   imageSrc={DashboardGif}
                   gifSrc={DashboardGif}
-                  githubRepo="https://github.com/FelixAlexander1/Tienda-e"
+                  githubRepo="https://github.com/FelixAlexander1/dashboard"
                   />
+                <CardProyectos 
+                  title="Warehouse"
+                  description="Aplicación para control de almacen."
+                  imageSrc={WarehouseGif}
+                  gifSrc={WarehouseGif}
+                  githubRepo="https://github.com/FelixAlexander1/almacen"
+                  />  
               </div>
             </div>
           )}
