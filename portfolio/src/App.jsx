@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '98.css'; 
 import 'portfolio/src/App.css';
-import miImagen from 'portfolio/src/images/avatar.png';
-import windowsImage from 'portfolio/src/images/windows-0.png';
+import miImagen from './images/avatar.png';
+import windowsImage from './images/windows-0.png';
 import { FaJava, FaDatabase, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiHtml5, SiCss3 } from 'react-icons/si';
 import ContactInfo from './components/ContactInfo';
