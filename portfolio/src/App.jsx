@@ -14,7 +14,7 @@ import blogGif from './assets/gifs/Blog.gif';
 import tiendagif from './assets/gifs/tiendagif.gif';
 import DashboardGif from './assets/gifs/Dashboard.gif';
 import WarehouseGif from './assets/gifs/Warehouse.gif';
-import artflashGif from './assets/gifs/artflash.gif';
+//import artflashGif from './assets/gifs/artflash.gif';
 
 function App() {
   const [activeTab, setActiveTab] = useState('sobre-mi');
@@ -117,8 +117,8 @@ function App() {
                 <CardProyectos 
                   title="ArtFlash"
                   description="Aplicación para estudiar arte."
-                  imageSrc={artflashGif}
-                  gifSrc={artflashGif}
+                  //imageSrc={artflashGif}
+                  //gifSrc={artflashGif}
                   githubRepo="https://github.com/FelixAlexander1/artflash-app"
                   />  
               </div>
