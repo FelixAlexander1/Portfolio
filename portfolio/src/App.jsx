@@ -14,7 +14,7 @@ import blogGif from './assets/gifs/Blog.gif';
 import tiendagif from './assets/gifs/tiendagif.gif';
 import DashboardGif from './assets/gifs/Dashboard.gif';
 import WarehouseGif from './assets/gifs/Warehouse.gif';
-import artflashGif from './assets/gifs/ArtFlash.gif';
+import artflashGif from './assets/gifs/artflash.gif';
 
 function App() {
   const [activeTab, setActiveTab] = useState('sobre-mi');
