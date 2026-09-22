@@ -10,8 +10,7 @@ function CardProyectos({ title, description, imageSrc = '', gifSrc = '', moreInf
   };
 
   return (
-    <div 
-      className="card-proyectos"
+    <div className="card-proyectos"
       onMouseEnter={() => setIsHovered(true)} 
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -23,13 +22,14 @@ function CardProyectos({ title, description, imageSrc = '', gifSrc = '', moreInf
         height="auto" 
       />
       <p>{description}</p>
-      {isHovered && (
-        <div className="more-info">
-          <p>{moreInfo}</p>
-          <button className="btn" onClick={handleViewCodeClick}>Ver Código</button>
-        </div>
-      )}
+
+      {/* Siempre renderizado, pero controlado por clases CSS */}
+      <div className={`more-info ${isHovered ? 'visible' : ''}`}>
+        <p>{moreInfo}</p>
+        <button className="btn" onClick={handleViewCodeClick}>Ver Código</button>
+      </div>
     </div>
+
   );
 }
 

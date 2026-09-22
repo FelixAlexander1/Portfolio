@@ -258,7 +258,7 @@ p {
   flex: 1;
   box-sizing: border-box;
   overflow: hidden;
-  min-height: 650px;
+  min-height: 600px;
   /* Estilo Windows 98 */
   background-color: #c0c0c0;
   border: 2px solid #808080;
@@ -411,12 +411,15 @@ p {
 
 .card-proyectos-container {
   display: flex;
-  flex-wrap: wrap; /* permite que bajen a la siguiente fila */
+  flex-wrap: wrap; 
   gap: 1rem;
   justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .card-proyectos-container > * {
-  flex: 1 1 250px; /* cada card ocupa mínimo 250px */
-  max-width: 300px; /* opcional: para que no se hagan demasiado grandes */
+  flex: 1 1 250px; 
+  max-width: 350px; 
+ 
 }
